@@ -11,9 +11,9 @@
 </head>
 <body>
     <div id="app">
-        <input type="number" v-model="experience">
+        <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number" v-model="accountExperience" @input="getLevel">
         <h1>
-          Experience is: {{ experience }}
+          Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
         </h1>
     </div>
 
@@ -275,12 +275,24 @@
     
     <script>
         Vue.createApp({
-        data() {
-            return {
-                experience: 0,
-                level: 1
+            data() {
+                return {
+                    accountExperience: 0,
+                    accountLevel: 1
+                }
+            },
+            methods: {
+                getLevel() {
+                    let data = LEVEL_DATA.find(level =>{
+                        if(this.accountExperience < LEVEL_DATA[1].combinedXp){
+                            return LEVEL_DATA[0]
+                        }
+                        return level.combinedXp >= this.accountExperience
+                    });
+                    this.accountLevel = data ? data.level : 50;
+                    console.log('getting level...', data);
+                }
             }
-        }
         }).mount('#app');
     </script>
 </body>
