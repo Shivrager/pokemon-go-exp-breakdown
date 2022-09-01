@@ -15,6 +15,7 @@
         <h1>
           Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
         </h1>
+        <h2>Experience needed to the next level is: {{experienceToNextLevel}}</h2>
     </div>
 
     
@@ -278,19 +279,18 @@
             data() {
                 return {
                     accountExperience: 0,
-                    accountLevel: 1
+                    accountLevel: 1,
+                    experienceToNextLevel: LEVEL_DATA[1].combinedXp
                 }
             },
             methods: {
                 getLevel() {
                     let data = LEVEL_DATA.find(level =>{
-                        if(this.accountExperience < LEVEL_DATA[1].combinedXp){
-                            return LEVEL_DATA[0]
-                        }
-                        return level.combinedXp >= this.accountExperience
+                        return this.accountExperience < level.combinedXp
                     });
-                    this.accountLevel = data ? data.level : 50;
-                    console.log('getting level...', data);
+                    this.accountLevel = data ? data.level - 1 : 50;
+
+                    this.experienceToNextLevel = LEVEL_DATA[this.accountLevel].combinedXp - this.accountExperience;
                 }
             }
         }).mount('#app');
