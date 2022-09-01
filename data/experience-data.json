@@ -1,252 +1,252 @@
 [
   {
-    "Level": 1,
-    "XP Required": "—",
-    "Combined XP": "—"
+    "level": 1,
+    "xpRequired": 0,
+    "combinedXp": 0
   },
   {
-    "Level": 2,
-    "XP Required": 1000,
-    "Combined XP": 1000
+    "level": 2,
+    "xpRequired": 1000,
+    "combinedXp": 1000
   },
   {
-    "Level": 3,
-    "XP Required": 2000,
-    "Combined XP": 3000
+    "level": 3,
+    "xpRequired": 2000,
+    "combinedXp": 3000
   },
   {
-    "Level": 4,
-    "XP Required": 3000,
-    "Combined XP": 6000
+    "level": 4,
+    "xpRequired": 3000,
+    "combinedXp": 6000
   },
   {
-    "Level": 5,
-    "XP Required": 4000,
-    "Combined XP": 10000
+    "level": 5,
+    "xpRequired": 4000,
+    "combinedXp": 10000
   },
   {
-    "Level": 6,
-    "XP Required": 5000,
-    "Combined XP": 15000
+    "level": 6,
+    "xpRequired": 5000,
+    "combinedXp": 15000
   },
   {
-    "Level": 7,
-    "XP Required": 6000,
-    "Combined XP": 21000
+    "level": 7,
+    "xpRequired": 6000,
+    "combinedXp": 21000
   },
   {
-    "Level": 8,
-    "XP Required": 7000,
-    "Combined XP": 28000
+    "level": 8,
+    "xpRequired": 7000,
+    "combinedXp": 28000
   },
   {
-    "Level": 9,
-    "XP Required": 8000,
-    "Combined XP": 36000
+    "level": 9,
+    "xpRequired": 8000,
+    "combinedXp": 36000
   },
   {
-    "Level": 10,
-    "XP Required": 9000,
-    "Combined XP": 45000
+    "level": 10,
+    "xpRequired": 9000,
+    "combinedXp": 45000
   },
   {
-    "Level": 11,
-    "XP Required": 10000,
-    "Combined XP": 55000
+    "level": 11,
+    "xpRequired": 10000,
+    "combinedXp": 55000
   },
   {
-    "Level": 12,
-    "XP Required": 10000,
-    "Combined XP": 65000
+    "level": 12,
+    "xpRequired": 10000,
+    "combinedXp": 65000
   },
   {
-    "Level": 13,
-    "XP Required": 10000,
-    "Combined XP": 75000
+    "level": 13,
+    "xpRequired": 10000,
+    "combinedXp": 75000
   },
   {
-    "Level": 14,
-    "XP Required": 10000,
-    "Combined XP": 85000
+    "level": 14,
+    "xpRequired": 10000,
+    "combinedXp": 85000
   },
   {
-    "Level": 15,
-    "XP Required": 15000,
-    "Combined XP": 100000
+    "level": 15,
+    "xpRequired": 15000,
+    "combinedXp": 100000
   },
   {
-    "Level": 16,
-    "XP Required": 20000,
-    "Combined XP": 120000
+    "level": 16,
+    "xpRequired": 20000,
+    "combinedXp": 120000
   },
   {
-    "Level": 17,
-    "XP Required": 20000,
-    "Combined XP": 140000
+    "level": 17,
+    "xpRequired": 20000,
+    "combinedXp": 140000
   },
   {
-    "Level": 18,
-    "XP Required": 20000,
-    "Combined XP": 160000
+    "level": 18,
+    "xpRequired": 20000,
+    "combinedXp": 160000
   },
   {
-    "Level": 19,
-    "XP Required": 25000,
-    "Combined XP": 185000
+    "level": 19,
+    "xpRequired": 25000,
+    "combinedXp": 185000
   },
   {
-    "Level": 20,
-    "XP Required": 25000,
-    "Combined XP": 210000
+    "level": 20,
+    "xpRequired": 25000,
+    "combinedXp": 210000
   },
   {
-    "Level": 21,
-    "XP Required": 50000,
-    "Combined XP": 260000
+    "level": 21,
+    "xpRequired": 50000,
+    "combinedXp": 260000
   },
   {
-    "Level": 22,
-    "XP Required": 75000,
-    "Combined XP": 335000
+    "level": 22,
+    "xpRequired": 75000,
+    "combinedXp": 335000
   },
   {
-    "Level": 23,
-    "XP Required": 100000,
-    "Combined XP": 435000
+    "level": 23,
+    "xpRequired": 100000,
+    "combinedXp": 435000
   },
   {
-    "Level": 24,
-    "XP Required": 125000,
-    "Combined XP": 560000
+    "level": 24,
+    "xpRequired": 125000,
+    "combinedXp": 560000
   },
   {
-    "Level": 25,
-    "XP Required": 150000,
-    "Combined XP": 710000
+    "level": 25,
+    "xpRequired": 150000,
+    "combinedXp": 710000
   },
   {
-    "Level": 26,
-    "XP Required": 190000,
-    "Combined XP": 900000
+    "level": 26,
+    "xpRequired": 190000,
+    "combinedXp": 900000
   },
   {
-    "Level": 27,
-    "XP Required": 200000,
-    "Combined XP": 1100000
+    "level": 27,
+    "xpRequired": 200000,
+    "combinedXp": 1100000
   },
   {
-    "Level": 28,
-    "XP Required": 250000,
-    "Combined XP": 1350000
+    "level": 28,
+    "xpRequired": 250000,
+    "combinedXp": 1350000
   },
   {
-    "Level": 29,
-    "XP Required": 300000,
-    "Combined XP": 1650000
+    "level": 29,
+    "xpRequired": 300000,
+    "combinedXp": 1650000
   },
   {
-    "Level": 30,
-    "XP Required": 350000,
-    "Combined XP": 2000000
+    "level": 30,
+    "xpRequired": 350000,
+    "combinedXp": 2000000
   },
   {
-    "Level": 31,
-    "XP Required": 500000,
-    "Combined XP": 2500000
+    "level": 31,
+    "xpRequired": 500000,
+    "combinedXp": 2500000
   },
   {
-    "Level": 32,
-    "XP Required": 500000,
-    "Combined XP": 3000000
+    "level": 32,
+    "xpRequired": 500000,
+    "combinedXp": 3000000
   },
   {
-    "Level": 33,
-    "XP Required": 750000,
-    "Combined XP": 3750000
+    "level": 33,
+    "xpRequired": 750000,
+    "combinedXp": 3750000
   },
   {
-    "Level": 34,
-    "XP Required": 1000000,
-    "Combined XP": 4750000
+    "level": 34,
+    "xpRequired": 1000000,
+    "combinedXp": 4750000
   },
   {
-    "Level": 35,
-    "XP Required": 1250000,
-    "Combined XP": 6000000
+    "level": 35,
+    "xpRequired": 1250000,
+    "combinedXp": 6000000
   },
   {
-    "Level": 36,
-    "XP Required": 1500000,
-    "Combined XP": 7500000
+    "level": 36,
+    "xpRequired": 1500000,
+    "combinedXp": 7500000
   },
   {
-    "Level": 37,
-    "XP Required": 2000000,
-    "Combined XP": 9500000
+    "level": 37,
+    "xpRequired": 2000000,
+    "combinedXp": 9500000
   },
   {
-    "Level": 38,
-    "XP Required": 2500000,
-    "Combined XP": 12000000
+    "level": 38,
+    "xpRequired": 2500000,
+    "combinedXp": 12000000
   },
   {
-    "Level": 39,
-    "XP Required": 3000000,
-    "Combined XP": 15000000
+    "level": 39,
+    "xpRequired": 3000000,
+    "combinedXp": 15000000
   },
   {
-    "Level": 40,
-    "XP Required": 5000000,
-    "Combined XP": 20000000
+    "level": 40,
+    "xpRequired": 5000000,
+    "combinedXp": 20000000
   },
   {
-    "Level": 41,
-    "XP Required": 6000000,
-    "Combined XP": 26000000
+    "level": 41,
+    "xpRequired": 6000000,
+    "combinedXp": 26000000
   },
   {
-    "Level": 42,
-    "XP Required": 7500000,
-    "Combined XP": 33500000
+    "level": 42,
+    "xpRequired": 7500000,
+    "combinedXp": 33500000
   },
   {
-    "Level": 43,
-    "XP Required": 9000000,
-    "Combined XP": 42500000
+    "level": 43,
+    "xpRequired": 9000000,
+    "combinedXp": 42500000
   },
   {
-    "Level": 44,
-    "XP Required": 11000000,
-    "Combined XP": 53500000
+    "level": 44,
+    "xpRequired": 11000000,
+    "combinedXp": 53500000
   },
   {
-    "Level": 45,
-    "XP Required": 13000000,
-    "Combined XP": 66500000
+    "level": 45,
+    "xpRequired": 13000000,
+    "combinedXp": 66500000
   },
   {
-    "Level": 46,
-    "XP Required": 15500000,
-    "Combined XP": 82000000
+    "level": 46,
+    "xpRequired": 15500000,
+    "combinedXp": 82000000
   },
   {
-    "Level": 47,
-    "XP Required": 18000000,
-    "Combined XP": 100000000
+    "level": 47,
+    "xpRequired": 18000000,
+    "combinedXp": 100000000
   },
   {
-    "Level": 48,
-    "XP Required": 21000000,
-    "Combined XP": 121000000
+    "level": 48,
+    "xpRequired": 21000000,
+    "combinedXp": 121000000
   },
   {
-    "Level": 49,
-    "XP Required": 25000000,
-    "Combined XP": 146000000
+    "level": 49,
+    "xpRequired": 25000000,
+    "combinedXp": 146000000
   },
   {
-    "Level": 50,
-    "XP Required": 30000000,
-    "Combined XP": 176000000
+    "level": 50,
+    "xpRequired": 30000000,
+    "combinedXp": 176000000
   }
 ]

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Pokemon Go Experience Dashboard</title>
+</head>
+<body>
+    <div id="app">
+        <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" type="number" v-model="accountExperience" @input="getLevel">
+        <h1>
+          Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
+        </h1>
+        <h2>Experience needed to the next level is: {{experienceToNextLevel}}</h2>
+    </div>
+
+    
+    <script>
+        const LEVEL_DATA = [
+            {
+                "level": 1,
+                "xpRequired": 0,
+                "combinedXp": 0
+            },
+            {
+                "level": 2,
+                "xpRequired": 1000,
+                "combinedXp": 1000
+            },
+            {
+                "level": 3,
+                "xpRequired": 2000,
+                "combinedXp": 3000
+            },
+            {
+                "level": 4,
+                "xpRequired": 3000,
+                "combinedXp": 6000
+            },
+            {
+                "level": 5,
+                "xpRequired": 4000,
+                "combinedXp": 10000
+            },
+            {
+                "level": 6,
+                "xpRequired": 5000,
+                "combinedXp": 15000
+            },
+            {
+                "level": 7,
+                "xpRequired": 6000,
+                "combinedXp": 21000
+            },
+            {
+                "level": 8,
+                "xpRequired": 7000,
+                "combinedXp": 28000
+            },
+            {
+                "level": 9,
+                "xpRequired": 8000,
+                "combinedXp": 36000
+            },
+            {
+                "level": 10,
+                "xpRequired": 9000,
+                "combinedXp": 45000
+            },
+            {
+                "level": 11,
+                "xpRequired": 10000,
+                "combinedXp": 55000
+            },
+            {
+                "level": 12,
+                "xpRequired": 10000,
+                "combinedXp": 65000
+            },
+            {
+                "level": 13,
+                "xpRequired": 10000,
+                "combinedXp": 75000
+            },
+            {
+                "level": 14,
+                "xpRequired": 10000,
+                "combinedXp": 85000
+            },
+            {
+                "level": 15,
+                "xpRequired": 15000,
+                "combinedXp": 100000
+            },
+            {
+                "level": 16,
+                "xpRequired": 20000,
+                "combinedXp": 120000
+            },
+            {
+                "level": 17,
+                "xpRequired": 20000,
+                "combinedXp": 140000
+            },
+            {
+                "level": 18,
+                "xpRequired": 20000,
+                "combinedXp": 160000
+            },
+            {
+                "level": 19,
+                "xpRequired": 25000,
+                "combinedXp": 185000
+            },
+            {
+                "level": 20,
+                "xpRequired": 25000,
+                "combinedXp": 210000
+            },
+            {
+                "level": 21,
+                "xpRequired": 50000,
+                "combinedXp": 260000
+            },
+            {
+                "level": 22,
+                "xpRequired": 75000,
+                "combinedXp": 335000
+            },
+            {
+                "level": 23,
+                "xpRequired": 100000,
+                "combinedXp": 435000
+            },
+            {
+                "level": 24,
+                "xpRequired": 125000,
+                "combinedXp": 560000
+            },
+            {
+                "level": 25,
+                "xpRequired": 150000,
+                "combinedXp": 710000
+            },
+            {
+                "level": 26,
+                "xpRequired": 190000,
+                "combinedXp": 900000
+            },
+            {
+                "level": 27,
+                "xpRequired": 200000,
+                "combinedXp": 1100000
+            },
+            {
+                "level": 28,
+                "xpRequired": 250000,
+                "combinedXp": 1350000
+            },
+            {
+                "level": 29,
+                "xpRequired": 300000,
+                "combinedXp": 1650000
+            },
+            {
+                "level": 30,
+                "xpRequired": 350000,
+                "combinedXp": 2000000
+            },
+            {
+                "level": 31,
+                "xpRequired": 500000,
+                "combinedXp": 2500000
+            },
+            {
+                "level": 32,
+                "xpRequired": 500000,
+                "combinedXp": 3000000
+            },
+            {
+                "level": 33,
+                "xpRequired": 750000,
+                "combinedXp": 3750000
+            },
+            {
+                "level": 34,
+                "xpRequired": 1000000,
+                "combinedXp": 4750000
+            },
+            {
+                "level": 35,
+                "xpRequired": 1250000,
+                "combinedXp": 6000000
+            },
+            {
+                "level": 36,
+                "xpRequired": 1500000,
+                "combinedXp": 7500000
+            },
+            {
+                "level": 37,
+                "xpRequired": 2000000,
+                "combinedXp": 9500000
+            },
+            {
+                "level": 38,
+                "xpRequired": 2500000,
+                "combinedXp": 12000000
+            },
+            {
+                "level": 39,
+                "xpRequired": 3000000,
+                "combinedXp": 15000000
+            },
+            {
+                "level": 40,
+                "xpRequired": 5000000,
+                "combinedXp": 20000000
+            },
+            {
+                "level": 41,
+                "xpRequired": 6000000,
+                "combinedXp": 26000000
+            },
+            {
+                "level": 42,
+                "xpRequired": 7500000,
+                "combinedXp": 33500000
+            },
+            {
+                "level": 43,
+                "xpRequired": 9000000,
+                "combinedXp": 42500000
+            },
+            {
+                "level": 44,
+                "xpRequired": 11000000,
+                "combinedXp": 53500000
+            },
+            {
+                "level": 45,
+                "xpRequired": 13000000,
+                "combinedXp": 66500000
+            },
+            {
+                "level": 46,
+                "xpRequired": 15500000,
+                "combinedXp": 82000000
+            },
+            {
+                "level": 47,
+                "xpRequired": 18000000,
+                "combinedXp": 100000000
+            },
+            {
+                "level": 48,
+                "xpRequired": 21000000,
+                "combinedXp": 121000000
+            },
+            {
+                "level": 49,
+                "xpRequired": 25000000,
+                "combinedXp": 146000000
+            },
+            {
+                "level": 50,
+                "xpRequired": 30000000,
+                "combinedXp": 176000000
+            }
+            ]
+    </script>
+    
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    accountExperience: 0,
+                    accountLevel: 1,
+                    experienceToNextLevel: LEVEL_DATA[1].combinedXp
+                }
+            },
+            methods: {
+                getLevel() {
+                    let data = LEVEL_DATA.find(level =>{
+                        return this.accountExperience < level.combinedXp
+                    });
+                    this.accountLevel = data ? data.level - 1 : 50;
+
+                    this.experienceToNextLevel = LEVEL_DATA[this.accountLevel].combinedXp - this.accountExperience;
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
