@@ -1,0 +1,18 @@
+{
+    "oneStar": {
+        "level": 1,
+        "exp": 3000
+    },
+    "threeStar": {
+        "level": 3,
+        "exp": 5000
+    },
+    "fourStar": {
+        "level": 4,
+        "exp": 10000
+    },
+    "fiveStar": {
+        "level": 5,
+        "exp": 10000
+    }
+}
