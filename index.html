@@ -16,28 +16,13 @@
           Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
         </h1>
         <h2>Experience needed to the next level is: {{experienceToNextLevel}}</h2>
+        <div id="raids">
+            <p>{{Math.ceil(experienceToNextLevel / 3500)}} one star raids</p>
+            <p>{{Math.ceil(experienceToNextLevel / 5000)}} three star raids</p>
+            <p>{{Math.ceil(experienceToNextLevel / 10000)}} five star or mega raids</p>
+        </div>
     </div>
 
-    <script>
-        const RAID_VALUES = {
-            "oneStar": {
-                "level": 1,
-                "exp": 3000
-            },
-            "threeStar": {
-                "level": 3,
-                "exp": 5000
-            },
-            "fourStar": {
-                "level": 4,
-                "exp": 10000
-            },
-            "fiveStar": {
-                "level": 5,
-                "exp": 10000
-            }
-        }
-    </script>
     <script>
         const LEVEL_DATA = [
             {
@@ -299,7 +284,7 @@
                 return {
                     accountExperience: 0,
                     accountLevel: 1,
-                    experienceToNextLevel: LEVEL_DATA[1].combinedXp
+                    experienceToNextLevel: LEVEL_DATA[1].combinedXp,
                 }
             },
             methods: {
