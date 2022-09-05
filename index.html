@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="index.css">
     <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
     <script src="https://unpkg.com/vue@3"></script>
     <title>Pokemon Go Experience Dashboard</title>
@@ -16,9 +16,16 @@
           Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
         </h1>
         <h2>Experience needed to the next level is: {{experienceToNextLevel}}</h2>
+        <div id="raids">
+            <p>{{Math.ceil(experienceToNextLevel / 3500)}} one star raids</p>
+            <p>{{Math.ceil(experienceToNextLevel / 5000)}} three star raids</p>
+            <p>{{Math.ceil(experienceToNextLevel / 10000)}} five star or mega raids</p>
+        </div>
+        <div>
+
+        </div>
     </div>
 
-    
     <script>
         const LEVEL_DATA = [
             {
