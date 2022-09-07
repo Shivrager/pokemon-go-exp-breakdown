@@ -16,12 +16,14 @@
           Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
         </h1>
         <h2>Experience needed to the next level is: {{experienceToNextLevel}}</h2>
-        <div id="raids">
+        <div id="raids" class="exp-section">
+            <h2>Raid details</h2>
             <p>{{Math.ceil(experienceToNextLevel / 3500) * expMultiplier}} one star raids</p>
             <p>{{Math.ceil(experienceToNextLevel / 5000) * expMultiplier}} three star raids</p>
             <p>{{Math.ceil(experienceToNextLevel / 10000) * expMultiplier}} five star or mega raids</p>
         </div>
-        <div id="catches">
+        <div id="catches" class="exp-section">
+            <h2>Catch details</h2>
             <p>{{Math.ceil(experienceToNextLevel / (100 + curveBallExp)) * expMultiplier}} pokemon caught</p>
             <p>{{Math.ceil(experienceToNextLevel / (100 + 20 + curveBallExp)) * expMultiplier}} pokemon caught (nice throw)</p>
             <p>{{Math.ceil(experienceToNextLevel / (100 + 100 + curveBallExp)) * expMultiplier}} pokemon caught (great throw)</p>
