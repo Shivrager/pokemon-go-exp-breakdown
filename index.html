@@ -16,10 +16,18 @@
           Your experience is: {{ accountExperience }}, your level is {{ accountLevel }}
         </h1>
         <h2>Experience needed to the next level is: {{experienceToNextLevel}}</h2>
-        <div id="raids">
-            <p>{{Math.ceil(experienceToNextLevel / 3500)}} one star raids</p>
-            <p>{{Math.ceil(experienceToNextLevel / 5000)}} three star raids</p>
-            <p>{{Math.ceil(experienceToNextLevel / 10000)}} five star or mega raids</p>
+        <div id="raids" class="exp-section">
+            <h2>Raid details</h2>
+            <p>{{Math.ceil(experienceToNextLevel / 3500) * expMultiplier}} one star raids</p>
+            <p>{{Math.ceil(experienceToNextLevel / 5000) * expMultiplier}} three star raids</p>
+            <p>{{Math.ceil(experienceToNextLevel / 10000) * expMultiplier}} five star or mega raids</p>
+        </div>
+        <div id="catches" class="exp-section">
+            <h2>Catch details</h2>
+            <p>{{Math.ceil(experienceToNextLevel / (100 + curveBallExp)) * expMultiplier}} pokemon to catch</p>
+            <p>{{Math.ceil(experienceToNextLevel / (100 + 20 + curveBallExp)) * expMultiplier}} pokemon to catch (nice throw)</p>
+            <p>{{Math.ceil(experienceToNextLevel / (100 + 100 + curveBallExp)) * expMultiplier}} pokemon to catch (great throw)</p>
+            <p>{{Math.ceil(experienceToNextLevel / (100 + 1000 + curveBallExp)) * expMultiplier}} pokemon to catch (excellent throw)</p>
         </div>
         <div>
 
@@ -287,7 +295,9 @@
                 return {
                     accountExperience: 0,
                     accountLevel: 1,
-                    experienceToNextLevel: LEVEL_DATA[1].combinedXp
+                    experienceToNextLevel: LEVEL_DATA[1].combinedXp,
+                    curveBallExp: 0,
+                    expMultiplier: 1
                 }
             },
             methods: {
