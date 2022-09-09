@@ -8,6 +8,13 @@ body{
       background-color: #3a3b3c;
       color: white;
     }
+    
+    #expInput{
+      background: transparent;
+      border: none;
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
 }
 
 .exp-section{
